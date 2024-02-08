@@ -14,7 +14,7 @@
 namespace {
 
 constexpr base::FilePath::CharType kChromeExecutable[] =
-    FILE_PATH_LITERAL("brave.exe");
+    FILE_PATH_LITERAL("asil.exe");
 #if 0
     FILE_PATH_LITERAL("chrome.exe");
 #endif
