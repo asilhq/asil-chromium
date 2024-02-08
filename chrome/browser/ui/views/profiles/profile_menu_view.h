@@ -45,6 +45,7 @@ class ProfileMenuView : public ProfileMenuViewBase {
   gfx::ImageSkia GetSyncIcon() const override;
 
  private:
+  BRAVE_PROFILE_MENU_VIEW_H
   friend class ProfileMenuViewExtensionsTest;
   friend class ProfileMenuViewSignoutTest;
   friend class ProfileMenuViewSyncErrorButtonTest;

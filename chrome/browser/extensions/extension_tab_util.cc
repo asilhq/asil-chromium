@@ -819,6 +819,7 @@ bool ExtensionTabUtil::IsKillURL(const GURL& url) {
   }
 
   if (!url.SchemeIs(content::kChromeUIScheme)) {
+    if (!url.SchemeIs(content::kBraveUIScheme))
     return false;
   }
 

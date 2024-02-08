@@ -2345,6 +2345,7 @@ FormRetrievalResult LoginDatabase::StatementToForms(
     std::u16string plaintext_password;
     EncryptionResult result =
         DecryptPasswordFromStatement(*statement, &plaintext_password);
+    BRAVE_STATEMENT_TO_FORMS
     if (result == ENCRYPTION_RESULT_SERVICE_FAILURE) {
       has_service_failure = true;
       continue;

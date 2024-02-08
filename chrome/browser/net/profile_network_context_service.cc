@@ -535,6 +535,7 @@ network::mojom::CTPolicyPtr ProfileNetworkContextService::GetCTPolicy() {
   std::vector<std::string> excluded_legacy_spkis(
       TranslateStringArray(ct_excluded_legacy_spkis));
 
+  BRAVE_PROFILE_NETWORK_CONTEXT_SERVICE_GET_CT_POLICY
   return network::mojom::CTPolicy::New(std::move(excluded),
                                        std::move(excluded_spkis),
                                        std::move(excluded_legacy_spkis));

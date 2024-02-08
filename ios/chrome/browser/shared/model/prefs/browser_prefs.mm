@@ -350,6 +350,7 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
   registry->RegisterIntegerPref(kAppStoreRatingTotalDaysOnChromeKey, 0);
   registry->RegisterListPref(kAppStoreRatingActiveDaysInPastWeekKey);
   registry->RegisterTimePref(kAppStoreRatingLastShownPromoDayKey, base::Time());
+  BRAVE_REGISTER_LOCAL_STATE_PREFS
 }
 
 void RegisterBrowserStatePrefs(user_prefs::PrefRegistrySyncable* registry) {
@@ -555,6 +556,7 @@ void RegisterBrowserStatePrefs(user_prefs::PrefRegistrySyncable* registry) {
   // Preference related to feed.
   registry->RegisterTimePref(kActivityBucketLastReportedDateKey, base::Time());
   registry->RegisterBooleanPref(kSyncRequested, false);
+  BRAVE_REGISTER_BROWSER_STATE_PREFS
 }
 
 // This method should be periodically pruned of year+ old migrations.
@@ -710,6 +712,7 @@ void MigrateObsoleteBrowserStatePrefs(PrefService* prefs) {
 
   // Added 10/2023.
   prefs->ClearPref(kSyncRequested);
+  BRAVE_MIGRATE_OBSOLETE_BROWSER_STATE_PREFS
 }
 
 void MigrateObsoleteUserDefault(void) {

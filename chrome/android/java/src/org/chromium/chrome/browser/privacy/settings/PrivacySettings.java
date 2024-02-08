@@ -57,7 +57,7 @@ import org.chromium.ui.text.SpanApplier;
  * Fragment to keep track of the all the privacy related preferences.
  */
 public class PrivacySettings
-        extends ChromeBaseSettingsFragment implements Preference.OnPreferenceChangeListener {
+        extends org.chromium.chrome.browser.settings.BravePreferenceFragment implements Preference.OnPreferenceChangeListener {
     private static final String PREF_CAN_MAKE_PAYMENT = "can_make_payment";
     private static final String PREF_PRELOAD_PAGES = "preload_pages";
     private static final String PREF_HTTPS_FIRST_MODE = "https_first_mode";
@@ -342,6 +342,7 @@ public class PrivacySettings
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         menu.clear();
+        super.onCreateOptionsMenu(menu, inflater);
         MenuItem help =
                 menu.add(Menu.NONE, R.id.menu_id_targeted_help, Menu.NONE, R.string.menu_help);
         help.setIcon(TraceEventVectorDrawableCompat.create(
@@ -355,6 +356,6 @@ public class PrivacySettings
                     getActivity(), getString(R.string.help_context_privacy), null);
             return true;
         }
-        return false;
+        return super.onOptionsItemSelected(item);
     }
 }

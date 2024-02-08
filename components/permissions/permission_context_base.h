@@ -136,6 +136,7 @@ class PermissionContextBase : public content_settings::Observer {
     return content_settings_type_;
   }
 
+  BRAVE_PERMISSION_CONTEXT_BASE_H_
  protected:
   virtual ContentSetting GetPermissionStatusInternal(
       content::RenderFrameHost* render_frame_host,

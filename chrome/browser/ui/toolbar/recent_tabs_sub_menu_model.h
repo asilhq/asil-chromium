@@ -93,7 +93,7 @@ class RecentTabsSubMenuModel : public ui::SimpleMenuModel,
 
   // Index of the separator that follows the history menu item. Used as a
   // reference position for inserting local entries.
-  static constexpr size_t kHistorySeparatorIndex = 1;
+  static constexpr size_t kHistorySeparatorIndex = 2;
 
   // Build the menu items by populating the menumodel.
   void Build();

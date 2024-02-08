@@ -5299,6 +5299,7 @@ ScriptValue WebGL2RenderingContextBase::getParameter(ScriptState* script_state,
                                                      GLenum pname) {
   if (isContextLost())
     return ScriptValue::CreateNull(script_state->GetIsolate());
+  BRAVE_WEBGL2_RENDERING_CONTEXT_BASE_GETPARAMETER
   switch (pname) {
     case GL_SHADING_LANGUAGE_VERSION: {
       return WebGLAny(
@@ -5911,6 +5912,7 @@ ScriptValue WebGL2RenderingContextBase::getFramebufferAttachmentParameter(
   if (isContextLost() || !ValidateGetFramebufferAttachmentParameterFunc(
                              kFunctionName, target, attachment))
     return ScriptValue::CreateNull(script_state->GetIsolate());
+  BRAVE_WEBGL2_RENDERING_CONTEXT_BASE
 
   WebGLFramebuffer* framebuffer_binding = GetFramebufferBinding(target);
   DCHECK(!framebuffer_binding || framebuffer_binding->Object());
@@ -6129,6 +6131,7 @@ ScriptValue WebGL2RenderingContextBase::getTexParameter(
     GLenum pname) {
   if (isContextLost() || !ValidateTextureBinding("getTexParameter", target))
     return ScriptValue::CreateNull(script_state->GetIsolate());
+  BRAVE_WEBGL2_RENDERING_CONTEXT_BASE
 
   switch (pname) {
     case GL_TEXTURE_WRAP_R:

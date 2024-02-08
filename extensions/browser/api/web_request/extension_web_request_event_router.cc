@@ -1183,6 +1183,7 @@ ExtensionWebRequestEventRouter::OnAuthRequired(
                                          *request)) {
     return AuthRequiredResponse::AUTH_REQUIRED_RESPONSE_NO_ACTION;
   }
+  BRAVE_EXTENSION_WEB_REQUEST_EVENT_ROUTER_ON_AUTH_REQUIRED
 
   int extra_info_spec = 0;
   RawListeners listeners = GetMatchingListeners(

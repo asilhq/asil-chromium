@@ -518,7 +518,7 @@ public class SingleCategorySettings extends BaseSiteSettingsFragment
             if (queryHasChanged) getInfoForOrigins();
             return true;
         }
-        return false;
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

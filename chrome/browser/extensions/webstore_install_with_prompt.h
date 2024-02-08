@@ -47,6 +47,12 @@ class WebstoreInstallWithPrompt : public WebstoreStandaloneInstaller {
   WebstoreInstallWithPrompt& operator=(const WebstoreInstallWithPrompt&) =
       delete;
 
+  WebstoreInstallWithPrompt(const std::string& webstore_item_id,
+                            Profile* profile,
+                            gfx::NativeWindow parent_window,
+                            Callback callback,
+                            bool show_prompt);
+
  protected:
   friend class base::RefCountedThreadSafe<WebstoreInstallWithPrompt>;
   ~WebstoreInstallWithPrompt() override;
@@ -63,7 +69,7 @@ class WebstoreInstallWithPrompt : public WebstoreStandaloneInstaller {
 
  private:
   bool show_post_install_ui_;
-
+  bool show_pre_install_ui_;
   // A non-visible WebContents used to download data from the webstore.
   std::unique_ptr<content::WebContents> dummy_web_contents_;
 

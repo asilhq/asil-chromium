@@ -29,6 +29,8 @@
 #include "extensions/common/extension_urls.h"
 #include "url/gurl.h"
 
+#include "chrome/browser/extensions/webstore_reinstaller.h"
+
 using content::WebContents;
 
 namespace {
@@ -127,10 +129,10 @@ void WebstoreStandaloneInstaller::CompleteInstall(
     RunCallback(result == webstore_install::SUCCESS, error, result);
   CleanUp();
 }
-
+bool ShouldShowPostInstallUI2=false;
 void WebstoreStandaloneInstaller::ProceedWithInstallPrompt() {
   install_prompt_ = CreateInstallPrompt();
-  if (install_prompt_.get()) {
+  if (install_prompt_.get() && ShouldShowPostInstallUI2) {
     ShowInstallUI();
     // Control flow finishes up in OnInstallPromptDone().
   } else {

@@ -172,6 +172,7 @@ class RecentTabsSubMenuModelTest : public BrowserWithTestWindowTest {
                              ->GetUnderlyingOpenTabsUIDelegateForTest());
   }
 
+  BRAVE_RECENT_TABS_SUB_MENU_MODEL_TEST
  private:
   raw_ptr<sync_sessions::SessionSyncService, DanglingUntriaged>
       session_sync_service_;
@@ -580,8 +581,8 @@ TEST_F(RecentTabsSubMenuModelTest, MaxSessionsAndRecency) {
   EXPECT_THAT(base::span<const std::u16string>(
                   recent_tabs_builder.GetTabTitlesSortedByRecency())
                   .subspan(0, 3),
-              ElementsAre(model.GetLabelAt(5), model.GetLabelAt(8),
-                          model.GetLabelAt(11)));
+              ElementsAre(model.GetLabelAt(6), model.GetLabelAt(9),
+                          model.GetLabelAt(12)));
 }
 
 TEST_F(RecentTabsSubMenuModelTest, MaxTabsPerSessionAndRecency) {
@@ -618,6 +619,6 @@ TEST_F(RecentTabsSubMenuModelTest, MaxTabsPerSessionAndRecency) {
   EXPECT_THAT(base::span<const std::u16string>(
                   recent_tabs_builder.GetTabTitlesSortedByRecency())
                   .subspan(0, 4),
-              ElementsAre(model.GetLabelAt(5), model.GetLabelAt(6),
-                          model.GetLabelAt(7), model.GetLabelAt(8)));
+              ElementsAre(model.GetLabelAt(6), model.GetLabelAt(7),
+                          model.GetLabelAt(8), model.GetLabelAt(9)));
 }

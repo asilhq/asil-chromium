@@ -40,7 +40,6 @@ WebstoreReinstaller::~WebstoreReinstaller() {
 void WebstoreReinstaller::BeginReinstall() {
   WebstoreStandaloneInstaller::BeginInstall();
 }
-
 bool WebstoreReinstaller::CheckRequestorAlive() const {
   return web_contents() != nullptr;
 }
@@ -57,6 +56,9 @@ WebstoreReinstaller::CreateInstallPrompt() const {
   return prompt;
 }
 
+bool WebstoreReinstaller::ShouldShowPreInstallUI() const {
+  return false;
+}
 bool WebstoreReinstaller::ShouldShowPostInstallUI() const {
   return false;
 }
