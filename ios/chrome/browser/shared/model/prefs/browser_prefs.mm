@@ -434,6 +434,7 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
   registry->RegisterIntegerPref(kAppStoreRatingTotalDaysOnChromeKey, 0);
   registry->RegisterListPref(kAppStoreRatingActiveDaysInPastWeekKey);
   registry->RegisterTimePref(kAppStoreRatingLastShownPromoDayKey, base::Time());
+  BRAVE_REGISTER_LOCAL_STATE_PREFS
 }
 
 void RegisterBrowserStatePrefs(user_prefs::PrefRegistrySyncable* registry) {
@@ -662,6 +663,7 @@ void RegisterBrowserStatePrefs(user_prefs::PrefRegistrySyncable* registry) {
   registry->RegisterBooleanPref(kSyncRequested, false);
 
   registry->RegisterBooleanPref(prefs::kDetectUnitsEnabled, true);
+  BRAVE_REGISTER_BROWSER_STATE_PREFS
 }
 
 // This method should be periodically pruned of year+ old migrations.

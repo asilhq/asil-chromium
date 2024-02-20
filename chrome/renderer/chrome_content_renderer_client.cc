@@ -588,7 +588,7 @@ void ChromeContentRendererClient::RenderFrameCreated(
       ChromeExtensionsRendererClient::GetInstance()->extension_dispatcher());
 #endif
   content_settings::ContentSettingsAgentImpl* content_settings =
-      new content_settings::ContentSettingsAgentImpl(
+      new content_settings::BraveContentSettingsAgentImpl(
           render_frame, should_allow_for_content_settings,
           std::move(content_settings_delegate));
   if (chrome_observer_.get()) {
@@ -764,6 +764,7 @@ void ChromeContentRendererClient::RenderFrameCreated(
 #if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_CHROMEOS)
   MultilineDetector::InstallIfNecessary(render_frame);
 #endif
+  BRAVE_RENDER_FRAME_CREATED
 
   if (render_frame->IsMainFrame()) {
     new commerce::CommerceWebExtractor(render_frame, registry);

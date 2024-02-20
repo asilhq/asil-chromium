@@ -299,7 +299,7 @@ public class FeedSurfaceMediator
         // Start is showing, update the value of Pref.ENABLE_SNIPPETS_BY_DSE here. The
         // value should be updated before adding an observer to prevent an extra call of
         // updateContent().
-        getPrefService()
+        if (FeedFeatures.isFeedEnabled()) getPrefService()
                 .setBoolean(
                         Pref.ENABLE_SNIPPETS_BY_DSE,
                         !mIsNewTabSearchEngineUrlAndroidEnabled

@@ -364,6 +364,7 @@ static_library("browser") {
     "//ui/base",
     "//ui/gfx",
   ]
+  sources += brave_components_omnibox_browser_sources deps += brave_components_omnibox_browser_deps
 
   configs += [ "//build/config/compiler:wexit_time_destructors" ]
 

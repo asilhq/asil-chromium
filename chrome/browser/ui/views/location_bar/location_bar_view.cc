@@ -688,6 +688,7 @@ void LocationBarView::Layout() {
   if (show_overriding_permission_chip)
     text_left += text_overriding_permission_chip_indent;
 
+  BRAVE_LAYOUT_LEADING_DECORATIONS
   LocationBarLayout leading_decorations(LocationBarLayout::Position::kLeftEdge,
                                         text_left);
   LocationBarLayout trailing_decorations(
@@ -760,6 +761,7 @@ void LocationBarView::Layout() {
     }
   };
 
+  BRAVE_LAYOUT_TRAILING_DECORATIONS
   add_trailing_decoration(page_action_icon_container_,
                           /*intra_item_padding=*/0);
   for (ContentSettingImageView* view : base::Reversed(content_setting_views_)) {

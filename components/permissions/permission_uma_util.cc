@@ -130,6 +130,7 @@ RequestTypeForUma GetUmaValueForRequestType(RequestType request_type) {
     case RequestType::kFileSystemAccess:
       return RequestTypeForUma::PERMISSION_FILE_SYSTEM_ACCESS;
 #endif
+    BRAVE_GET_UMA_VALUE_FOR_REQUEST_TYPE
   }
 }
 

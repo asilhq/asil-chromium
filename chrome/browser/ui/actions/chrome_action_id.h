@@ -555,6 +555,8 @@
   /* Side Panel items */ \
   E(kActionSidePanelShowAboutThisSite) \
   E(kActionSidePanelShowAssistant) \
+  E(kPlaylistSidePanelShowAssistant) \
+  E(kChatUISidePanelShowAssistant) \
   E(kActionSidePanelShowBookmarks, IDC_SHOW_BOOKMARK_SIDE_PANEL) \
   E(kActionSidePanelShowCustomizeChrome) \
   E(kActionSidePanelShowFeed) \
