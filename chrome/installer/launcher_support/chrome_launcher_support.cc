@@ -39,7 +39,7 @@ const wchar_t kInstallationRegKey[] = L"Software\\Chromium";
 #endif
 
 // Copied from util_constants.cc.
-const wchar_t kChromeExe[] = L"brave.exe";
+const wchar_t kChromeExe[] = L"kahf.exe";
 #if 0
 const wchar_t kChromeExe[] = L"chrome.exe";
 #endif
