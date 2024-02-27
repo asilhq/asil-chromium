@@ -261,3 +261,4 @@ class WebviewStartupSystemHealthBenchmark(perf_benchmark.PerfBenchmark):
   @classmethod
   def Name(cls):
     return 'system_health.webview_startup'
+from import_inline import inline_file_from_src; inline_file_from_src("brave/chromium_src/tools/perf/benchmarks/system_health.py", globals(), locals())

@@ -72,6 +72,7 @@ content::WebUIDataSource* CreateAndAddHistoryUIHTMLSource(Profile* profile) {
       profile, chrome::kChromeUIHistoryHost);
   webui::SetupChromeRefresh2023(source);
 
+  BRAVE_CREATE_HISTORY_UI_HTML_SOURCE
   static constexpr webui::LocalizedString kStrings[] = {
       // Localized strings (alphabetical order).
       {"actionMenuDescription", IDS_HISTORY_ACTION_MENU_DESCRIPTION},

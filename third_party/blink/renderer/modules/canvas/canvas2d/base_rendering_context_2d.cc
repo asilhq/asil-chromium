@@ -2072,6 +2072,7 @@ ImageData* BaseRenderingContext2D::getImageData(
 }
 
 ImageData* BaseRenderingContext2D::getImageDataInternal(
+    BRAVE_GET_IMAGE_DATA_PARAMS
     int sx,
     int sy,
     int sw,
@@ -2230,6 +2231,7 @@ ImageData* BaseRenderingContext2D::getImageDataInternal(
       DCHECK(!bounds.intersect(SkIRect::MakeXYWH(sx, sy, sw, sh)));
     }
   }
+  BRAVE_GET_IMAGE_DATA
 
   return image_data;
 }
@@ -2878,6 +2880,7 @@ TextMetrics* BaseRenderingContext2D::measureText(const String& text) {
       return MakeGarbageCollected<TextMetrics>();
     }
 
+    BRAVE_BASE_RENDERING_CONTEXT_2D_MEASURE_TEXT
     canvas->GetDocument().UpdateStyleAndLayoutTreeForNode(
         canvas, DocumentUpdateReason::kCanvas);
   }

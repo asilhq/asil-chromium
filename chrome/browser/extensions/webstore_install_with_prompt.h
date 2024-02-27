@@ -36,6 +36,13 @@ class WebstoreInstallWithPrompt : public WebstoreStandaloneInstaller {
                             Profile* profile,
                             Callback callback);
 
+                            
+  WebstoreInstallWithPrompt(const std::string& webstore_item_id,
+                            Profile* profile,
+                            gfx::NativeWindow parent_window,
+                            Callback callback,
+                            bool show_prompt);
+
   // If this constructor is used, the parent of the install dialog will be
   // |parent_window|.
   WebstoreInstallWithPrompt(const std::string& webstore_item_id,

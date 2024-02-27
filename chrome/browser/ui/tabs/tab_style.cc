@@ -275,6 +275,7 @@ SkColor ChromeRefresh2023TabStyle::GetTabBackgroundColor(
 
 // static
 const TabStyle* TabStyle::Get() {
+  BRAVE_TAB_STYLE_GET
   static TabStyle* const tab_style =
       features::IsChromeRefresh2023()
           ? static_cast<TabStyle*>(new ChromeRefresh2023TabStyle())

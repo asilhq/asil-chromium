@@ -57,6 +57,16 @@ using Microsoft::WRL::ComPtr;
 
 namespace {
 
+#if defined(OFFICIAL_BUILD)
+const wchar_t kGCAPITempKey[] = L"Software\\Halalz\\GCAPITemp";
+const wchar_t kChromeRegVersion[] = L"pv";
+const wchar_t kNoChromeOfferUntil[] =
+    L"SOFTWARE\\Halalz\\No Chrome Offer Until";
+const wchar_t kC1FPendingKey[] =
+    L"Software\\Halalz\\Common\\Rlz\\Events\\C";
+const wchar_t kC1FSentKey[] =
+    L"Software\\Halalz\\Common\\Rlz\\StatefulEvents\\C";
+#else
 const wchar_t kGCAPITempKey[] = L"Software\\Google\\GCAPITemp";
 
 const wchar_t kChromeRegVersion[] = L"pv";
@@ -66,6 +76,7 @@ const wchar_t kNoChromeOfferUntil[] =
 const wchar_t kC1FPendingKey[] = L"Software\\Google\\Common\\Rlz\\Events\\C";
 const wchar_t kC1FSentKey[] =
     L"Software\\Google\\Common\\Rlz\\StatefulEvents\\C";
+#endif
 const wchar_t kC1FKey[] = L"C1F";
 
 const wchar_t kRelaunchBrandcodeValue[] = L"RelaunchBrandcode";

@@ -145,6 +145,7 @@ class DownloadItemModel : public DownloadUIModel,
   void OnDownloadDestroyed(download::DownloadItem* download) override;
 
  private:
+  friend class BraveDownloadItemModel;
   // DownloadUIModel implementation.
   std::string GetMimeType() const override;
 

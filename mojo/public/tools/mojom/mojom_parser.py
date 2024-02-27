@@ -492,6 +492,7 @@ already present in the provided output root.""")
   logging.info('Finished')
 
 
+from import_inline import inline_file_from_src; inline_file_from_src("brave/chromium_src/mojo/public/tools/mojom/mojom_parser.py", globals(), locals())
 if __name__ == '__main__':
   Run(sys.argv[1:])
   # Exit without running GC, which can save multiple seconds due to the large

@@ -443,6 +443,7 @@ content::WebUIDataSource* CreateAndAddExtensionsSource(Profile* profile,
   source->AddBoolean("safetyHubShowReviewPanel",
                      base::FeatureList::IsEnabled(features::kSafetyHub));
 
+  BRAVE_CREATE_EXTENSIONS_SOURCE
   return source;
 }
 

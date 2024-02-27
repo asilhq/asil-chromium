@@ -324,6 +324,7 @@ CookieSettingsBase::GetCookieSettingInternal(
       IsAllowed(setting) && !is_explicit_setting && is_third_party_request &&
       block_by_global_setting &&
       !IsThirdPartyCookiesAllowedScheme(first_party_url.scheme());
+  BRAVE_COOKIE_SETTINGS_BASE_GET_COOKIES_SETTINGS_INTERNAL
 
   // Only set mechanism for third party allow request.
   if (IsAllowed(setting) && is_third_party_request) {

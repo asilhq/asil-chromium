@@ -259,6 +259,7 @@ class SyncServiceImpl : public SyncService,
   SyncClient* GetSyncClientForTest();
 
  private:
+  BRAVE_SYNC_SERVICE_IMPL_H_
   enum UnrecoverableErrorReason {
     ERROR_REASON_ENGINE_INIT_FAILURE,
     ERROR_REASON_ACTIONABLE_ERROR,

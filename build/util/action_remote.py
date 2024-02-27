@@ -99,6 +99,7 @@ def _get_mojom_parser_inputs(exec_root, output_files, extra_args):
              processed_inputs)
 
 
+from import_inline import inline_file_from_src; inline_file_from_src("brave/chromium_src/build/util/action_remote.py", globals(), locals())
 def main():
   # Set up argparser with some rewrapper flags.
   argparser = argparse.ArgumentParser(description='rewrapper executor for gn',
