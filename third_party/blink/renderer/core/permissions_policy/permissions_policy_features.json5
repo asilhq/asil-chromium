@@ -436,5 +436,13 @@
       // Parser also accepts "window-placement" alias (crbug.com/1328581).
       permissions_policy_name: "window-management",
     },
+    {
+      name: "Ethereum",
+      permissions_policy_name: "ethereum"
+    },
+    {
+      name: "Solana",
+      permissions_policy_name: "solana"
+    },
   ],
 }

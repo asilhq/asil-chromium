@@ -170,6 +170,7 @@ class WebUIBubbleManagerT : public WebUIBubbleManager {
 
     auto bubble_view = std::make_unique<WebUIBubbleDialogView>(
         anchor_view_, contents_wrapper, anchor, arrow);
+    BRAVE_WEBUI_BUBBLE_MANAGER_T_CREATE_WEB_UI_BUBBLE_DIALOG
 
     // Register callback to emit histogram when the widget is created
     if (bubble_init_start_time_) {

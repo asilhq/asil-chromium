@@ -88,6 +88,7 @@ ScheduledAction::ScheduledAction(ScriptState* script_state,
   } else {
     UseCounter::Count(target, WebFeature::kScheduledActionIgnored);
   }
+  BRAVE_SCHEDULED_ACTION_STRING_HANDLER_CONSTRUCTOR
 }
 
 ScheduledAction::~ScheduledAction() {

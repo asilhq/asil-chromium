@@ -1177,6 +1177,7 @@ void BookmarkBarView::Layout() {
       x = next_x;
     }
   }
+  BRAVE_LAYOUT
 
   const bool show_bookmarks_overflow =
       bookmark_model_->loaded() &&

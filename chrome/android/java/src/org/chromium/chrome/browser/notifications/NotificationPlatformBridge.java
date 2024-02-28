@@ -83,7 +83,7 @@ public class NotificationPlatformBridge {
 
     private static final int[] EMPTY_VIBRATION_PATTERN = new int[0];
 
-    private static NotificationPlatformBridge sInstance;
+    protected static NotificationPlatformBridge sInstance;
 
     private static NotificationManagerProxy sNotificationManagerOverride;
 
@@ -134,7 +134,7 @@ public class NotificationPlatformBridge {
         sNotificationManagerOverride = notificationManager;
     }
 
-    private NotificationPlatformBridge(long nativeNotificationPlatformBridge) {
+    protected NotificationPlatformBridge(long nativeNotificationPlatformBridge) {
         mNativeNotificationPlatformBridge = nativeNotificationPlatformBridge;
         Context context = ContextUtils.getApplicationContext();
         if (sNotificationManagerOverride != null) {
@@ -707,7 +707,7 @@ public class NotificationPlatformBridge {
         }
     }
 
-    private NotificationBuilderBase prepareNotificationBuilder(
+    protected NotificationBuilderBase prepareNotificationBuilder(
             String notificationId,
             @NotificationType int notificationType,
             String origin,
