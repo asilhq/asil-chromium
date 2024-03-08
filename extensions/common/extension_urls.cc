@@ -83,7 +83,7 @@ GURL GetDefaultWebstoreUpdateUrl() {
 
 GURL GetWebstoreUpdateUrl() {
   extensions::ExtensionsClient* client = extensions::ExtensionsClient::Get();
-  if (client)
+  if (client && client->GetWebstoreUpdateURL().is_empty() == false )
     return client->GetWebstoreUpdateURL();
   return GetDefaultWebstoreUpdateUrl();
 }
