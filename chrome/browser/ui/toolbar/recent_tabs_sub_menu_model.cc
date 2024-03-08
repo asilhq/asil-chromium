@@ -351,6 +351,7 @@ void RecentTabsSubMenuModel::Build() {
   }
   AddSeparator(ui::NORMAL_SEPARATOR);
   history_separator_index_ = GetItemCount() - 1;
+  BRAVE_RECENT_TABS_SUB_MENU_MODEL_BUILD
   BuildLocalEntries();
   BuildTabsFromOtherDevices();
 }
@@ -489,6 +490,7 @@ void RecentTabsSubMenuModel::BuildTabsFromOtherDevices() {
            ++k) {
         BuildOtherDevicesTabItem(this, session_tag, *tabs_in_session[k]);
       }  // for all tabs in one session
+      BRAVE_RECENT_TABS_SUB_MENU_MODEL_BUILD_TABS_FROM_OTHER_DEVICES
     }
     ++num_sessions_added;
   }  // for all sessions

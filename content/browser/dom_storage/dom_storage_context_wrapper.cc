@@ -312,6 +312,7 @@ bool DOMStorageContextWrapper::IsRequestValid(
         break;
       }
     }
+    BRAVE_DOM_STORAGE_CONTEXT_WRAPPER_IS_REQUEST_VALID
     // If the storage keys did not match, but storage access has been granted
     // and the request was for a first-party storage key on the same origin as
     // the frame's storage key, we can allow the request to proceed. See:

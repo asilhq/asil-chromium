@@ -519,6 +519,7 @@ void BookmarkBubbleView::ShowBubble(
   auto bubble = std::make_unique<views::BubbleDialogModelHost>(
       std::move(dialog_model), anchor_view, views::BubbleBorder::TOP_RIGHT);
   bookmark_bubble_ = bubble.get();
+  BRAVE_BOOKMARK_BUBBLE_VIEW
   if (highlighted_button)
     bubble->SetHighlightedButton(highlighted_button);
 

@@ -416,6 +416,7 @@ const char* PermissionKeyForRequestType(permissions::RequestType request_type) {
         return "window_management";
       }
 #endif
+    BRAVE_PERMISSION_KEY_FOR_REQUEST_TYPE
   }
 
   return nullptr;

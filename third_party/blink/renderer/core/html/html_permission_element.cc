@@ -34,7 +34,6 @@ using mojom::blink::PermissionDescriptorPtr;
 using mojom::blink::PermissionName;
 using mojom::blink::PermissionObserver;
 using mojom::blink::PermissionService;
-using mojom::blink::PermissionStatus;
 
 namespace {
 

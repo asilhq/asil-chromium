@@ -73,7 +73,7 @@ class CookieSettingsBase {
   CookieSettingsBase(const CookieSettingsBase&) = delete;
   CookieSettingsBase& operator=(const CookieSettingsBase&) = delete;
 
-  virtual ~CookieSettingsBase() = default;
+  virtual ~CookieSettingsBase();
 
   // An enum that represents the scope of cookies to which the user's
   // third-party-cookie-blocking setting applies, in a given context.

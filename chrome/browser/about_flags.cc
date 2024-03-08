@@ -3971,6 +3971,7 @@ const flags_ui::FeatureEntry::FeatureVariation
 //
 // When adding a new choice, add it to the end of the list.
 const FeatureEntry kFeatureEntries[] = {
+    BRAVE_ABOUT_FLAGS_FEATURE_ENTRIES
 // Include generated flags for flag unexpiry; see //docs/flag_expiry.md and
 // //tools/flags/generate_unexpire_flags.py.
 #include "build/chromeos_buildflags.h"
