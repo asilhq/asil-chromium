@@ -8,12 +8,14 @@
 #include <vector>
 
 #include "base/command_line.h"
+#include "base/strings/string_util.h"
 #include "base/containers/contains.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_split.h"
 #include "base/strings/sys_string_conversions.h"
 #include "build/build_config.h"
 #include "components/component_updater/component_updater_switches.h"
+#include "base/logging.h"
 
 namespace component_updater {
 
@@ -91,7 +93,11 @@ ComponentUpdaterCommandLineConfigPolicy::
 
   const std::string switch_url_source =
       GetSwitchArgument(switch_values, kSwitchUrlSource);
+
+   DLOG(ERROR)<< "\n Overriding component updater URL with: " << switch_url_source << " : switch_values = " << switch_values.size()<<" : kSwitchUrlSource= "<<kSwitchUrlSource;
+
   if (!switch_url_source.empty()) {
+    DLOG(ERROR)<< "Overriding component updater URL with " << switch_url_source << " : url_source_override_ = " << url_source_override_.spec()<<"\n\n ";
     url_source_override_ = GURL(switch_url_source);
     DCHECK(url_source_override_.is_valid());
   }
