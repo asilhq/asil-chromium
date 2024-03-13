@@ -60,6 +60,8 @@ std::unique_ptr<views::Label> CreateFormattedLabel(
 // CrashExitCodes in /tools/metrics/histograms/enums.xml.
 std::u16string ErrorToString(int error_code) {
   std::string error_string;
+  DLOG(ERROR) << "error_code: " << error_code << "Caller function: " << __func__
+              << std::endl;
   switch (std::abs(error_code)) {
     case 1:
       error_string = "RESULT_CODE_KILLED";

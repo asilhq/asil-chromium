@@ -150,17 +150,20 @@ int MainDllLoader::Launch(HINSTANCE instance,
 
   base::FilePath file;
   dll_ = Load(&file, cmd_line);
-  if (!dll_)
-    return chrome::RESULT_CODE_MISSING_DATA;
+DLOG(ERROR) << "cmd: " << cmd_line.GetCommandLineString() << " Caller function: " << __func__;
+// DLOG(ERROR) << "file: " << file.GetCommandLineString().GetString();
 
-  if (!is_browser) {
-    // Set non-browser processes up to be killed by the system after the
-    // browser goes away. The browser uses the default shutdown order, which
-    // is 0x280. Note that lower numbers here denote "kill later" and higher
-    // numbers mean "kill sooner". This gets rid of most of those unsightly
-    // sad tabs on logout and shutdown.
-    ::SetProcessShutdownParameters(kNonBrowserShutdownPriority - 1,
-                                   SHUTDOWN_NORETRY);
+if (!dll_)
+  return chrome::RESULT_CODE_MISSING_DATA;
+
+if (!is_browser) {
+  // Set non-browser processes up to be killed by the system after the
+  // browser goes away. The browser uses the default shutdown order, which
+  // is 0x280. Note that lower numbers here denote "kill later" and higher
+  // numbers mean "kill sooner". This gets rid of most of those unsightly
+  // sad tabs on logout and shutdown.
+  ::SetProcessShutdownParameters(kNonBrowserShutdownPriority - 1,
+                                 SHUTDOWN_NORETRY);
   }
 
   OnBeforeLaunch(process_type_, file);

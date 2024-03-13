@@ -787,6 +787,8 @@ int ChromeBrowserMainParts::PreEarlyInitialization() {
       chrome_feature_list_creator->TakeMetricsServicesManager(),
       chrome_feature_list_creator->GetMetricsServicesManagerClient());
 
+  DLOG(ERROR) << "Caller function: " << __func__;
+
   if (load_local_state_result == chrome::RESULT_CODE_MISSING_DATA &&
       failed_to_load_resource_bundle) {
     if (base::CommandLine::ForCurrentProcess()->HasSwitch(

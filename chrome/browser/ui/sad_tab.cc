@@ -125,6 +125,8 @@ int SadTab::GetErrorCodeFormatString() {
 }
 
 int SadTab::GetInfoMessage() {
+  std::cout << "fun: SadTab::GetInfoMessage "
+              << "Caller function: " << __func__;
   switch (kind_) {
 #if BUILDFLAG(IS_CHROMEOS)
     case SAD_TAB_KIND_KILLED_BY_OOM:
@@ -202,6 +204,11 @@ void SadTab::RecordFirstPaint() {
 }
 
 void SadTab::PerformAction(SadTab::Action action) {
+  int error_code = 1;
+
+  DLOG(ERROR) << "fun: SadTab::PerformAction "
+              << "Caller function: " << __func__;
+
   DCHECK(recorded_paint_);
   switch (action) {
     case Action::BUTTON:
