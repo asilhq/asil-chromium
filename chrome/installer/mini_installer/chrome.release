@@ -6,7 +6,7 @@
 #
 # Chrome Application dir entries, sorted alphabetically.
 #
-kahf.exe: %(ChromeDir)s\
+bw3.exe: %(ChromeDir)s\
 chrome_proxy.exe: %(ChromeDir)s\
 #
 # Chrome version dir assembly manifest.
@@ -18,7 +18,7 @@ chrome_proxy.exe: %(ChromeDir)s\
 #
 # Chrome version dir entries, sorted alphabetically.
 #
-kahf.exe.sig: %(VersionDir)s\
+bw3.exe.sig: %(VersionDir)s\
 brave_vpn_helper.exe: %(VersionDir)s\
 brave_vpn_wireguard_service.exe: %(VersionDir)s\BraveVpnWireguardService\
 tunnel.dll: %(VersionDir)s\BraveVpnWireguardService\

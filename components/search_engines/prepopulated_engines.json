@@ -74,7 +74,7 @@
     },
 
     "brave": {
-      "name": "Kahf Search",
+      "name": "BrowseWeb3 Search",
       "keyword": "search.brave.com",
       "favicon_url": "https://cdn.search.brave.com/serp/favicon.ico",
       "search_url": "https://search.brave.com/search?q={searchTerms}",
